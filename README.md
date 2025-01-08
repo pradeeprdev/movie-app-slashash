@@ -19,7 +19,8 @@ Install development dependencies:
 
 npm install --save-dev nodemon
 
-# Create .env file in mail directory and copy the content from .env.example file and use your credential
+# Create .env file 
+In main directory create .env file and copy the content from .env.example file and use your credential
 
 # Create Database and Table
 
