@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Favorite Movies</h1>
+            <a href="index.html" class="btn btn-secondary">Go to Home</a>
+        </div>
+        <div id="favorites" class="row mt-4"></div>
+    </div>
+
+    <script>
+        async function loadFavorites() {
+            const response = await fetch('/api/favorites');
+            const favorites = await response.json();
+
+            const favoritesContainer = document.getElementById('favorites');
+            favoritesContainer.innerHTML = favorites.map(fav => `
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="${fav.poster}" class="card-img-top" alt="${fav.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${fav.title}</h5>
+                            <p class="card-text">${fav.year} (${fav.type})</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        loadFavorites();
+    </script>
+</body>
+</html>
