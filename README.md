@@ -42,6 +42,6 @@ CREATE TABLE favorites (
 
 Start the server using nodemon:
 
-npx nodemon server.js
+`npx nodemon server.js`
 
 Access the application in your browser at http://localhost:3000.
