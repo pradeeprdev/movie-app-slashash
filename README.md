@@ -2,7 +2,8 @@
 
 # Register and Get API Key
 
-Visit OMDB API to register and obtain an API key.
+Visit following OMDB API to register and obtain an API key.
+www.omdbapi.com/apikey.aspx
 
 # Install Dependencies
 
