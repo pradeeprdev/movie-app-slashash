@@ -1,12 +1,12 @@
 # Project Setup Instructions
 
-Register and Get API Key
+# Register and Get API Key
 
 Visit OMDB API to register and obtain an API key.
 
 # Install Dependencies
 
-Initialize the project:
+# Initialize the project:
 
 npm init -y
 
@@ -18,11 +18,14 @@ Install development dependencies:
 
 npm install --save-dev nodemon
 
+# Create .env file in mail directory and copy the content from .env.example file and use your credential
+
 # Create Database and Table
 
 Open your MySQL client and execute the following commands:
 
 CREATE DATABASE omdb_favorites;
+
 USE omdb_favorites;
 
 CREATE TABLE favorites (
